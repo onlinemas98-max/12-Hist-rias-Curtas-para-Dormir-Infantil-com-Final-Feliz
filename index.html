@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,9 +17,6 @@
             font-family: 'Inter', sans-serif;
             background-color: #ffffff;
             color: #1e293b;
-        }
-        .markdown-body p {
-            margin-bottom: 1.5rem;
         }
         .produto-box {
             border: 3px solid #2ecc71;
@@ -40,7 +37,7 @@
             font-size: 13px;
             border-radius: 6px;
             font-weight: bold;
-            shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .botao-preco {
             display: inline-block;
@@ -58,12 +55,36 @@
             transform: scale(1.05);
         }
         .story-card:hover {
-            border-color: #e2e8f0;
+            border-color: #cbd5e1;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        nav a:hover {
+            color: #4f46e5;
         }
     </style>
 </head>
 <body class="antialiased">
+
+    <!-- Navigation Menu -->
+    <nav class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/80 backdrop-blur-md">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
+            <div class="flex items-center gap-2">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-lg shadow-indigo-200">
+                    <span class="text-xl font-bold">H</span>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-slate-900">Histórias para Dormir</span>
+            </div>
+            <div class="hidden items-center gap-8 md:flex">
+                <a href="#beneficios" class="text-sm font-medium text-slate-600 transition-colors">Benefícios</a>
+                <a href="#historias" class="text-sm font-medium text-slate-600 transition-colors">As Histórias</a>
+                <a href="#dicas" class="text-sm font-medium text-slate-600 transition-colors">Dicas</a>
+                <a href="#faq" class="text-sm font-medium text-slate-600 transition-colors">FAQ</a>
+            </div>
+            <button class="rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white transition-all hover:bg-slate-800 active:scale-95 md:hidden">
+                Menu
+            </button>
+        </div>
+    </nav>
 
     <!-- Header / Hero -->
     <header class="py-16 px-4 max-w-4xl mx-auto text-center">
@@ -106,20 +127,6 @@
                     <p class="text-slate-700">"Sim! Na verdade, existem muitas histórias curtas para dormir infantil com final feliz que ajudam as crianças a relaxar e dormir mais tranquilas. Essas histórias são perfeitas para criar um momento especial entre pais e filhos antes de dormir."</p>
                 </div>
             </div>
-            <div class="flex gap-4">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold">P1</div>
-                <div>
-                    <p class="text-xs font-bold uppercase tracking-wider text-indigo-600">Pessoa 1</p>
-                    <p class="text-slate-700 italic">"Sério? Eu queria algo rápido, porque às vezes as crianças já estão com sono."</p>
-                </div>
-            </div>
-            <div class="flex gap-4">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold">P2</div>
-                <div>
-                    <p class="text-xs font-bold uppercase tracking-wider text-emerald-600">Pessoa 2</p>
-                    <p class="text-slate-700">"Perfeito então! Neste artigo você vai encontrar 12 Histórias Curtas para Dormir Infantil com Final Feliz, fáceis de ler, educativas e ideais para acalmar as crianças antes de dormir."</p>
-                </div>
-            </div>
         </section>
 
         <!-- Produto Topo -->
@@ -127,7 +134,7 @@
             <span class="selo">Melhor Escolha</span>
             <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class="shrink-0">
-                    <img src="https://i.postimg.cc/qBCWcPsc/365-Historias-Para-Dormir-Pe-da-Letra.webp" alt="365 Histórias Para Dormir" class="max-w-[250px] rounded-lg shadow-md">
+                    <img src="https://i.postimg.cc/qBCWcPsc/365-Historias-Para-Dormir-Pe-da-Letra.webp" alt="365 Histórias Para Dormir" class="max-w-[250px] rounded-lg shadow-md" referrerPolicy="no-referrer">
                 </div>
                 <div class="flex-1 text-center md:text-left">
                     <h2 class="text-[#1a7f37] text-2xl font-bold mb-1">365 Histórias Para Dormir – Pé da Letra</h2>
@@ -141,27 +148,16 @@
         </div>
 
         <!-- Benefícios -->
-        <section class="mb-24">
+        <section id="beneficios" class="mb-24">
             <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Por que contar histórias para crianças antes de dormir?</h2>
             
-            <div class="mb-10 space-y-6 rounded-xl border border-slate-100 p-6 bg-slate-50">
-                <div class="flex gap-4">
-                    <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-xs">P1</div>
-                    <p class="text-slate-700 italic">"Mas contar histórias antes de dormir realmente faz diferença?"</p>
-                </div>
-                <div class="flex gap-4">
-                    <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs">P2</div>
-                    <p class="text-slate-700">"Faz muita diferença! As histórias infantis para dormir ajudam a criança a relaxar e estimulam a imaginação. Além disso, criam um momento de carinho entre pais e filhos."</p>
-                </div>
-            </div>
-
             <div class="grid gap-8 md:grid-cols-2">
                 <div class="space-y-6">
                     <h3 class="text-xl font-semibold text-slate-900">Entre os principais benefícios estão:</h3>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
                             <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-[10px]">✓</span>
-                            <span class="text-slate-600">Ajuda a criança a relaxar antes de dormir</span>
+                            <span class="text-slate-600">Ajuda a relaxar e acalmar antes do sono</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-[10px]">✓</span>
@@ -169,39 +165,23 @@
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-[10px]">✓</span>
-                            <span class="text-slate-600">Fortalece o vínculo entre pais e filhos</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-[10px]">✓</span>
-                            <span class="text-slate-600">Desenvolve o vocabulário e a linguagem</span>
+                            <span class="text-slate-600">Fortalece o vínculo afetivo familiar</span>
                         </li>
                     </ul>
                 </div>
                 <div class="rounded-3xl bg-indigo-50 p-8">
                     <h3 class="mb-4 text-xl font-semibold text-indigo-900">Dica de Ouro</h3>
                     <p class="text-indigo-800 leading-relaxed">
-                        Tente criar um ritual. Diminua as luzes, use uma voz suave e deixe a criança escolher a história de vez em quando. Isso torna o momento ainda mais especial.
+                        Tente criar um ritual. Diminua as luzes, use uma voz suave e deixe a criança escolher a história de vez em quando.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- Histórias -->
-        <section class="mb-24">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-900 mb-6">12 Histórias Curtas para Dormir Infantil com Final Feliz</h2>
-                <div class="mx-auto max-w-2xl space-y-4 rounded-xl bg-slate-50 p-6 text-left border border-slate-100">
-                    <div class="flex gap-4">
-                        <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-xs">P1</div>
-                        <p class="text-slate-700 italic">"Então vamos às histórias! Quero algumas bem bonitas."</p>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs">P2</div>
-                        <p class="text-slate-700">"Claro! Prepare-se para conhecer 12 histórias infantis curtas com final feliz."</p>
-                    </div>
-                </div>
-            </div>
-
+        <section id="historias" class="mb-24">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">As 12 Histórias Curtas</h2>
+            
             <div class="space-y-10">
                 <!-- História 1 -->
                 <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
@@ -335,134 +315,55 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Produto Fundo -->
-            <div class="produto-box mt-24">
-                <span class="selo">Melhor Escolha</span>
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="shrink-0">
-                        <img src="https://i.postimg.cc/qBCWcPsc/365-Historias-Para-Dormir-Pe-da-Letra.webp" alt="365 Histórias Para Dormir" class="max-w-[250px] rounded-lg shadow-md">
-                    </div>
-                    <div class="flex-1 text-center md:text-left">
-                        <h2 class="text-[#1a7f37] text-2xl font-bold mb-1">365 Histórias Para Dormir – Pé da Letra</h2>
-                        <h3 class="text-lg text-[#333] font-semibold mb-3">Livro Infantil</h3>
-                        <p class="text-[#555] text-sm leading-relaxed">
-                            Um livro perfeito para criar momentos especiais antes de dormir. Com 365 histórias encantadoras, ele ajuda a estimular a imaginação das crianças e tornar a hora do sono muito mais divertida.
-                        </p>
-                        <a href="https://s.shopee.com.br/807uD19pBp" target="_blank" class="botao-preco">Ver Preço</a>
-                    </div>
+        <!-- Produto Fundo -->
+        <div class="produto-box mb-24">
+            <span class="selo">Melhor Escolha</span>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="shrink-0">
+                    <img src="https://i.postimg.cc/qBCWcPsc/365-Historias-Para-Dormir-Pe-da-Letra.webp" alt="365 Histórias Para Dormir" class="max-w-[250px] rounded-lg shadow-md" referrerPolicy="no-referrer">
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-[#1a7f37] text-2xl font-bold mb-1">365 Histórias Para Dormir – Pé da Letra</h2>
+                    <h3 class="text-lg text-[#333] font-semibold mb-3">Livro Infantil</h3>
+                    <p class="text-[#555] text-sm leading-relaxed">
+                        Um livro perfeito para criar momentos especiais antes de dormir. Com 365 histórias encantadoras, ele ajuda a estimular a imaginação das crianças e tornar a hora do sono muito mais divertida.
+                    </p>
+                    <a href="https://s.shopee.com.br/807uD19pBp" target="_blank" class="botao-preco">Ver Preço</a>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Tabela -->
-        <section class="mb-24">
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Tipos de Histórias Curtas para Dormir</h2>
-            
-            <div class="mb-10 space-y-6 rounded-xl border border-slate-100 p-6 bg-slate-50">
-                <div class="flex gap-4">
-                    <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-xs">P1</div>
-                    <p class="text-slate-700 italic">"Existem tipos diferentes de histórias?"</p>
-                </div>
-                <div class="flex gap-4">
-                    <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs">P2</div>
-                    <p class="text-slate-700">"Com certeza! Dependendo da idade e do tempo disponível, você pode escolher estilos diferentes."</p>
-                </div>
-            </div>
-
-            <div class="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
-                <table class="w-full text-left border-collapse">
-                    <thead class="bg-slate-900 text-white">
-                        <tr>
-                            <th class="p-4 font-semibold">Tipo de História</th>
-                            <th class="p-4 font-semibold">Duração Média</th>
-                            <th class="p-4 font-semibold">Idade Recomendada</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-200">
-                        <tr class="hover:bg-slate-50">
-                            <td class="p-4">Fábulas com Animais</td>
-                            <td class="p-4">3 a 5 minutos</td>
-                            <td class="p-4">2 a 6 anos</td>
-                        </tr>
-                        <tr class="hover:bg-slate-50">
-                            <td class="p-4">Contos de Fadas Curtos</td>
-                            <td class="p-4">5 a 8 minutos</td>
-                            <td class="p-4">4 a 8 anos</td>
-                        </tr>
-                        <tr class="hover:bg-slate-50">
-                            <td class="p-4">Histórias Educativas</td>
-                            <td class="p-4">4 a 6 minutos</td>
-                            <td class="p-4">3 a 7 anos</td>
-                        </tr>
-                        <tr class="hover:bg-slate-50">
-                            <td class="p-4">Poemas e Rimas</td>
-                            <td class="p-4">2 a 4 minutos</td>
-                            <td class="p-4">0 a 4 anos</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- Dicas -->
-        <section class="mb-24">
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Dicas para ler histórias para dormir</h2>
-            
-            <div class="mb-10 space-y-6 rounded-xl border border-slate-100 p-6 bg-slate-50">
-                <div class="flex gap-4">
-                    <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-xs">P1</div>
-                    <p class="text-slate-700 italic">"Você tem alguma dica para a hora da leitura?"</p>
-                </div>
-                <div class="flex gap-4">
-                    <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs">P2</div>
-                    <p class="text-slate-700">"Sim! O ambiente e a forma como você lê fazem toda a diferença para o sono da criança."</p>
-                </div>
-            </div>
-
-            <div class="grid gap-6 md:grid-cols-3">
-                <div class="rounded-2xl border border-slate-100 p-6 bg-white shadow-sm">
-                    <h4 class="text-lg font-bold text-slate-900 mb-3">Ambiente Calmo</h4>
-                    <p class="text-slate-600 text-sm">Diminua as luzes e evite barulhos externos para criar um clima de relaxamento.</p>
-                </div>
-                <div class="rounded-2xl border border-slate-100 p-6 bg-white shadow-sm">
-                    <h4 class="text-lg font-bold text-slate-900 mb-3">Voz Suave</h4>
-                    <p class="text-slate-600 text-sm">Use um tom de voz baixo e pausado para ajudar a criança a desacelerar.</p>
-                </div>
-                <div class="rounded-2xl border border-slate-100 p-6 bg-white shadow-sm">
-                    <h4 class="text-lg font-bold text-slate-900 mb-3">Interação Leve</h4>
-                    <p class="text-slate-600 text-sm">Faça perguntas simples sobre a história para manter o interesse sem agitar a criança.</p>
-                </div>
-            </div>
+        <section class="mb-24 overflow-hidden rounded-2xl border border-slate-200">
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-slate-900 text-white">
+                    <tr>
+                        <th class="p-4">Tipo de História</th>
+                        <th class="p-4">Duração</th>
+                        <th class="p-4">Idade</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                    <tr><td class="p-4">Fábulas</td><td class="p-4">3-5 min</td><td class="p-4">2-6 anos</td></tr>
+                    <tr><td class="p-4">Contos de Fadas</td><td class="p-4">5-8 min</td><td class="p-4">4-8 anos</td></tr>
+                    <tr><td class="p-4">Educativas</td><td class="p-4">4-6 min</td><td class="p-4">3-7 anos</td></tr>
+                </tbody>
+            </table>
         </section>
 
         <!-- FAQ -->
-        <section class="mb-24">
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Perguntas Frequentes (FAQ)</h2>
-            
-            <div class="mb-10 space-y-6 rounded-xl border border-slate-100 p-6 bg-slate-50">
-                <div class="flex gap-4">
-                    <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-xs">P1</div>
-                    <p class="text-slate-700 italic">"Ainda tenho algumas dúvidas comuns sobre o assunto."</p>
-                </div>
-                <div class="flex gap-4">
-                    <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-xs">P2</div>
-                    <p class="text-slate-700">"Sem problemas! Vamos responder às perguntas mais frequentes dos pais."</p>
-                </div>
-            </div>
-
+        <section id="faq" class="mb-24">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Perguntas Frequentes</h2>
             <div class="space-y-4">
-                <div class="rounded-xl border border-slate-200 p-6 bg-white">
-                    <h4 class="font-bold text-slate-900 mb-2">Qual o melhor horário para ler?</h4>
-                    <p class="text-slate-600">O ideal é ler cerca de 20 a 30 minutos antes do horário planejado para a criança dormir.</p>
+                <div class="rounded-xl border border-slate-200 p-6">
+                    <h4 class="font-bold mb-2">Qual o melhor horário para ler?</h4>
+                    <p class="text-slate-600">O ideal é ler cerca de 20 a 30 minutos antes do horário planejado para dormir.</p>
                 </div>
-                <div class="rounded-xl border border-slate-200 p-6 bg-white">
-                    <h4 class="font-bold text-slate-900 mb-2">Posso ler a mesma história várias vezes?</h4>
-                    <p class="text-slate-600">Sim! A repetição traz segurança para a criança e ajuda no aprendizado.</p>
-                </div>
-                <div class="rounded-xl border border-slate-200 p-6 bg-white">
-                    <h4 class="font-bold text-slate-900 mb-2">E se a criança dormir no meio da história?</h4>
-                    <p class="text-slate-600">Isso é ótimo! O objetivo principal é o relaxamento e o sono tranquilo.</p>
+                <div class="rounded-xl border border-slate-200 p-6">
+                    <h4 class="font-bold mb-2">Posso ler a mesma história várias vezes?</h4>
+                    <p class="text-slate-600">Sim! A repetição traz segurança e ajuda no aprendizado da criança.</p>
                 </div>
             </div>
         </section>
@@ -470,17 +371,10 @@
         <!-- Conclusão -->
         <section class="rounded-3xl bg-slate-900 p-10 text-white text-center">
             <h2 class="text-3xl font-bold mb-6">Conclusão</h2>
-            <div class="max-w-2xl mx-auto space-y-6 text-slate-300">
-                <p>
-                    Contar histórias curtas para dormir infantil com final feliz é uma ferramenta poderosa para pais e educadores. Além de facilitar o sono, essas histórias transmitem valores, ensinam lições importantes e criam memórias afetivas que durarão para sempre.
-                </p>
-                <p>
-                    Esperamos que estas 12 histórias tragam noites mais tranquilas e sonhos encantadores para sua família. Lembre-se: o mais importante não é a história em si, mas o tempo e o carinho que você dedica a esse momento.
-                </p>
-                <div class="pt-6 border-t border-slate-800">
-                    <p class="text-sm uppercase tracking-widest text-slate-500 font-bold">Boa noite e bons sonhos!</p>
-                </div>
-            </div>
+            <p class="text-slate-300 max-w-2xl mx-auto">
+                Contar histórias curtas para dormir infantil com final feliz é uma ferramenta poderosa. Esperamos que estas 12 histórias tragam noites mais tranquilas para sua família.
+            </p>
+            <p class="mt-8 text-sm uppercase tracking-widest text-slate-500 font-bold">Boa noite e bons sonhos!</p>
         </section>
 
     </main>
