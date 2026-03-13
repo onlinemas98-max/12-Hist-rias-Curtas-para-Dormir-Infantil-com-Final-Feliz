@@ -19,368 +19,551 @@
             color: #1e293b;
         }
         .produto-box {
-            border: 3px solid #2ecc71;
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
+            border: 2px solid #2ecc71;
+            padding: 24px;
+            max-width: 850px;
+            margin: 40px auto;
             position: relative;
-            background: #f9f9f9;
+            background: #ffffff;
             border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        @media (min-width: 768px) {
+            .produto-box {
+                flex-direction: row;
+                text-align: left;
+            }
         }
         .selo {
             position: absolute;
-            top: -12px;
-            left: 15px;
+            top: -14px;
+            left: 20px;
             background: #2ecc71;
             color: #fff;
-            padding: 6px 12px;
-            font-size: 13px;
-            border-radius: 6px;
+            padding: 4px 12px;
+            font-size: 12px;
+            border-radius: 4px;
             font-weight: bold;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .botao-preco {
             display: inline-block;
-            margin-top: 15px;
             background: #2ecc71;
             color: #fff;
-            padding: 12px 22px;
+            padding: 10px 25px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 6px;
             transition: 0.3s;
+            margin-top: 15px;
         }
         .botao-preco:hover {
             background: #27ae60;
-            transform: scale(1.05);
+            transform: translateY(-2px);
+        }
+        .story-card {
+            border: 1px solid #f1f5f9;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            background: #ffffff;
+            transition: all 0.3s;
         }
         .story-card:hover {
-            border-color: #cbd5e1;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: #e2e8f0;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
         }
-        nav a:hover {
-            color: #4f46e5;
+        .moral-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #f0fdf4;
+            color: #166534;
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.75rem;
+            font-size: 0.875rem;
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Navigation Menu -->
-    <nav class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/80 backdrop-blur-md">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 backdrop-blur-sm">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
             <div class="flex items-center gap-2">
-                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-lg shadow-indigo-200">
-                    <span class="text-xl font-bold">H</span>
+                <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-white font-bold">
+                    H
                 </div>
-                <span class="text-xl font-bold tracking-tight text-slate-900">Histórias para Dormir</span>
+                <span class="text-md font-bold text-slate-900">Blog Infantil</span>
             </div>
-            <div class="hidden items-center gap-8 md:flex">
-                <a href="#beneficios" class="text-sm font-medium text-slate-600 transition-colors">Benefícios</a>
-                <a href="#historias" class="text-sm font-medium text-slate-600 transition-colors">As Histórias</a>
-                <a href="#dicas" class="text-sm font-medium text-slate-600 transition-colors">Dicas</a>
-                <a href="#faq" class="text-sm font-medium text-slate-600 transition-colors">FAQ</a>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#" class="text-xs font-medium text-slate-600 hover:text-indigo-600">Início</a>
+                <a href="#historias" class="text-xs font-medium text-slate-600 hover:text-indigo-600">Histórias</a>
+                <a href="#beneficios" class="text-xs font-medium text-slate-600 hover:text-indigo-600">Benefícios</a>
+                <a href="#faq" class="text-xs font-medium text-slate-600 hover:text-indigo-600">FAQ</a>
             </div>
-            <button class="rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white transition-all hover:bg-slate-800 active:scale-95 md:hidden">
-                Menu
-            </button>
         </div>
     </nav>
 
-    <!-- Header / Hero -->
-    <header class="py-16 px-4 max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
-            12 Histórias Curtas para Dormir Infantil com Final Feliz
-        </h1>
-        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
-            Crie momentos mágicos e tranquilos antes do sono com contos educativos e encantadores.
-        </p>
-    </header>
-
-    <main class="max-w-4xl mx-auto px-4 pb-24">
+    <main class="max-w-4xl mx-auto px-6 pb-24">
         
+        <!-- Hero Section -->
+        <header class="py-16 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                12 Histórias Curtas para Dormir Infantil com Final Feliz
+            </h1>
+            <p class="text-md text-slate-500 max-w-xl mx-auto italic">
+                Crie momentos mágicos e tranquilos antes do sono com contos educativos e encantadores.
+            </p>
+        </header>
+
         <!-- Introdução -->
-        <section class="mb-16 text-lg leading-relaxed text-slate-700 space-y-6">
-            <p>
-                As 12 Histórias Curtas para Dormir Infantil com Final Feliz são uma maneira simples de ajudar as crianças a relaxar antes de dormir. Contar histórias à noite cria um momento tranquilo e especial entre pais e filhos.
-            </p>
-            <p>
-                Estudos na área de educação infantil mostram que ouvir histórias antes de dormir pode melhorar o sono, estimular a imaginação e ajudar no desenvolvimento emocional das crianças.
-            </p>
-            <p>
-                Por isso, muitos pais procuram histórias infantis curtas para dormir que sejam fáceis de entender e tenham finais felizes. Neste artigo, você encontrará 12 histórias perfeitas para tornar a hora de dormir mais calma e encantadora.
-            </p>
+        <section class="mb-16 text-md leading-relaxed text-slate-600 space-y-6">
+            <p>As 12 Histórias Curtas para Dormir Infantil com Final Feliz são uma maneira simples de ajudar as crianças a relaxar antes de dormir. Contar histórias à noite cria um momento tranquilo e especial entre pais e filhos.</p>
+            <p>Estudos na área de educação infantil mostram que ouvir histórias antes de dormir pode melhorar o sono, estimular a imaginação e ajudar no desenvolvimento emocional das crianças.</p>
+            <p>Por isso, muitos pais procuram histórias infantis curtas para dormir que sejam fáceis de entender e tenham finais felizes. Neste artigo, você encontrará 12 histórias perfeitas para tornar a hora de dormir mais calma e encantadora.</p>
         </section>
 
         <!-- Diálogo Inicial -->
         <section class="mb-16 space-y-6 rounded-2xl bg-slate-50 p-8 border border-slate-100">
             <div class="flex gap-4">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold">P1</div>
+                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-[10px]">P1</div>
                 <div>
-                    <p class="text-xs font-bold uppercase tracking-wider text-indigo-600">Pessoa 1</p>
-                    <p class="text-slate-700 italic">"Eu estava procurando histórias curtas para dormir infantil, sabe? Algo simples para contar para as crianças antes de dormir. Você conhece alguma?"</p>
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-indigo-600">PESSOA 1</p>
+                    <p class="text-slate-600 italic text-xs">"Eu estava procurando histórias curtas para dormir infantil, sabe? Algo simples para contar para as crianças antes de dormir. Você conhece alguma?"</p>
                 </div>
             </div>
             <div class="flex gap-4">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold">P2</div>
+                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-[10px]">P2</div>
                 <div>
-                    <p class="text-xs font-bold uppercase tracking-wider text-emerald-600">Pessoa 2</p>
-                    <p class="text-slate-700">"Sim! Na verdade, existem muitas histórias curtas para dormir infantil com final feliz que ajudam as crianças a relaxar e dormir mais tranquilas. Essas histórias são perfeitas para criar um momento especial entre pais e filhos antes de dormir."</p>
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-600">PESSOA 2</p>
+                    <p class="text-slate-600 text-xs">"Sim! Na verdade, existem muitas histórias curtas para dormir infantil com final feliz que ajudam as crianças a relaxar e dormir mais tranquilas. Essas histórias são perfeitas para criar um momento especial entre pais e filhos antes de dormir."</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-[10px]">P1</div>
+                <div>
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-indigo-600">PESSOA 1</p>
+                    <p class="text-slate-600 italic text-xs">"Sério? Eu queria algo rápido, porque às vezes as crianças já estão com sono."</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-[10px]">P2</div>
+                <div>
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-600">PESSOA 2</p>
+                    <p class="text-slate-600 text-xs">"Perfeito então! Neste artigo você vai encontrar 12 Histórias Curtas para Dormir Infantil com Final Feliz, fáceis de ler, educativas e ideais para acalmar as crianças antes de dormir."</p>
                 </div>
             </div>
         </section>
 
         <!-- Produto Topo -->
-        <div class="produto-box mb-24">
+        <div class="produto-box">
             <span class="selo">Melhor Escolha</span>
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="shrink-0">
-                    <img src="https://i.postimg.cc/qBCWcPsc/365-Historias-Para-Dormir-Pe-da-Letra.webp" alt="365 Histórias Para Dormir" class="max-w-[250px] rounded-lg shadow-md" referrerPolicy="no-referrer">
-                </div>
-                <div class="flex-1 text-center md:text-left">
-                    <h2 class="text-[#1a7f37] text-2xl font-bold mb-1">365 Histórias Para Dormir – Pé da Letra</h2>
-                    <h3 class="text-lg text-[#333] font-semibold mb-3">Livro Infantil</h3>
-                    <p class="text-[#555] text-sm leading-relaxed">
-                        Um livro perfeito para criar momentos especiais antes de dormir. Com 365 histórias encantadoras, ele ajuda a estimular a imaginação das crianças e tornar a hora do sono muito mais divertida.
-                    </p>
-                    <a href="https://s.shopee.com.br/807uD19pBp" target="_blank" class="botao-preco">Ver Preço</a>
-                </div>
+            <div class="shrink-0">
+                <img src="https://i.postimg.cc/qBCWcPsc/365-Historias-Para-Dormir-Pe-da-Letra.webp" alt="365 Histórias Para Dormir" class="w-40 rounded-lg shadow-sm" referrerPolicy="no-referrer">
+            </div>
+            <div>
+                <h2 class="text-[#2ecc71] text-lg font-bold mb-1">365 Histórias Para Dormir – Pé da Letra</h2>
+                <p class="text-slate-800 font-bold text-xs mb-2">Livro Infantil</p>
+                <p class="text-slate-500 text-[11px] leading-relaxed">
+                    Um livro perfeito para criar momentos especiais antes de dormir. Com 365 histórias encantadoras, ele ajuda a estimular a imaginação das crianças e tornar a hora do sono muito mais divertida.
+                </p>
+                <a href="https://s.shopee.com.br/807uD19pBp" target="_blank" class="botao-preco text-xs">Ver Preço</a>
             </div>
         </div>
 
-        <!-- Benefícios -->
-        <section id="beneficios" class="mb-24">
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Por que contar histórias para crianças antes de dormir?</h2>
+        <!-- Seção Benefícios -->
+        <section id="beneficios" class="my-24">
+            <h2 class="text-2xl font-bold text-slate-900 mb-12 text-center">Por que contar histórias para crianças antes de dormir?</h2>
             
+            <div class="mb-10 space-y-4 rounded-xl bg-slate-50 p-6 border border-slate-100">
+                <div class="flex gap-4">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-[8px]">P1</div>
+                    <p class="text-slate-600 italic text-[11px]">"Mas contar histórias antes de dormir realmente faz diferença?"</p>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-[8px]">P2</div>
+                    <p class="text-slate-600 text-[11px]">"Faz muita diferença! As histórias infantis para dormir ajudam a criança a relaxar e estimulam a imaginação. Além disso, criam um momento de carinho entre pais e filhos."</p>
+                </div>
+            </div>
+
             <div class="grid gap-8 md:grid-cols-2">
-                <div class="space-y-6">
-                    <h3 class="text-xl font-semibold text-slate-900">Entre os principais benefícios estão:</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-[10px]">✓</span>
-                            <span class="text-slate-600">Ajuda a relaxar e acalmar antes do sono</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-[10px]">✓</span>
-                            <span class="text-slate-600">Estimula a criatividade e imaginação</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-[10px]">✓</span>
-                            <span class="text-slate-600">Fortalece o vínculo afetivo familiar</span>
-                        </li>
+                <div>
+                    <h3 class="text-md font-bold text-slate-900 mb-4">Entre os principais benefícios estão:</h3>
+                    <ul class="space-y-3 text-xs text-slate-600">
+                        <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Ajuda a criança a relaxar antes de dormir</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Estimula a criatividade e imaginação</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Fortalece o vínculo entre pais e filhos</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Desenvolve o hábito da leitura</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Ensina valores importantes</li>
                     </ul>
                 </div>
-                <div class="rounded-3xl bg-indigo-50 p-8">
-                    <h3 class="mb-4 text-xl font-semibold text-indigo-900">Dica de Ouro</h3>
-                    <p class="text-indigo-800 leading-relaxed">
-                        Tente criar um ritual. Diminua as luzes, use uma voz suave e deixe a criança escolher a história de vez em quando.
-                    </p>
+                <div class="rounded-2xl bg-indigo-50 p-6 border border-indigo-100">
+                    <div class="flex gap-3 mb-3">
+                        <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-[8px]">P1</div>
+                        <p class="text-slate-600 italic text-[11px]">"Pronto! Histórias curtas são melhores?"</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-[8px]">P2</div>
+                        <p class="text-slate-600 text-[11px]">"Sim! Especialmente quando estão cansadas, as histórias curtas para crianças, porque elas conseguem acompanhar a narrativa sem perder a atenção."</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Histórias -->
+        <!-- Seção das Histórias -->
         <section id="historias" class="mb-24">
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">As 12 Histórias Curtas</h2>
+            <h2 class="text-2xl font-bold text-slate-900 mb-12 text-center">12 Histórias Curtas para Dormir Infantil com Final Feliz</h2>
             
-            <div class="space-y-10">
+            <div class="mb-12 space-y-4 rounded-xl bg-slate-50 p-6 border border-slate-100">
+                <div class="flex gap-4">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-[8px]">P1</div>
+                    <p class="text-slate-600 italic text-[11px]">"Então vamos às histórias! Quero algumas bem bonitas."</p>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-[8px]">P2</div>
+                    <p class="text-slate-600 text-[11px]">"Claro! Prepare-se para conhecer 12 histórias infantis curtas com final feliz."</p>
+                </div>
+            </div>
+
+            <div class="space-y-12">
                 <!-- História 1 -->
-                <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">1. O Coelhinho que Encontrou a Lua</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Era uma vez um coelhinho chamado Algodão que amava olhar para o céu. Uma noite, ele viu a lua tão brilhante que pensou que ela estava triste por estar sozinha. Algodão subiu no morro mais alto e começou a contar histórias para a lua. A lua brilhou ainda mais forte, iluminando o caminho de volta para sua toca, onde ele dormiu feliz sabendo que tinha uma amiga no céu.
+                <div class="story-card">
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">1. O Coelhinho que Aprendeu a Compartilhar</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                        Era uma vez um pequeno coelhinho chamado Lilo que adorava cenouras. Ele tinha um jardim cheio delas e guardava todas só para ele. Um dia, seus amigos da floresta ficaram com fome, mas Lilo não quis dividir. Então ele percebeu que brincar sozinho não era divertido. No dia seguinte, Lilo resolveu compartilhar suas cenouras com todos os amigos. Eles fizeram uma grande festa na floresta.
                     </p>
-                    <div class="inline-flex items-center gap-3 rounded-xl bg-emerald-50 px-5 py-2 text-emerald-800">
-                        <span class="font-bold">Moral:</span> A amizade pode ser encontrada nos lugares mais inesperados.
+                    <div class="moral-tag">
+                        <span class="font-bold text-[10px]">Moral da História:</span> <span class="text-[10px]">Compartilhar traz a felicidade comum.</span>
                     </div>
                 </div>
 
                 <!-- História 2 -->
-                <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">2. A Estrela que Queria Brincar</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Estelinha era uma pequena estrela que queria brincar na Terra. Uma noite, ela caiu suavemente em um jardim de flores. As flores ficaram encantadas com seu brilho e dançaram com ela a noite toda. Quando o sol começou a nascer, as flores ajudaram Estelinha a subir de volta para o céu em um raio de luz, e ela prometeu brilhar sempre para suas amigas flores.
+                <div class="story-card">
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">2. A Estrelinha que Queria Brilhar</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                        Luna era uma estrela chamada Luna que achava que não brilhava tanto quanto as outras. Todas as noites ela tentava brilhar mais forte, mas parecia que nada mudava. Até que um menino na Terra apontou para o céu e disse: "Olha, aquela é a estrela mais bonita!". Luna percebeu que seu brilho já era especial.
                     </p>
-                    <div class="inline-flex items-center gap-3 rounded-xl bg-emerald-50 px-5 py-2 text-emerald-800">
-                        <span class="font-bold">Moral:</span> Compartilhar momentos felizes cria laços eternos.
+                    <div class="moral-tag">
+                        <span class="font-bold text-[10px]">Moral da História:</span> <span class="text-[10px]">Cada um tem seu próprio brilho.</span>
                     </div>
                 </div>
 
                 <!-- História 3 -->
-                <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">3. O Ursinho e o Pote de Mel Amigo</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        O ursinho Pingo encontrou um pote de mel, mas ele estava muito alto. Seus amigos, o esquilo e o pássaro, viram sua dificuldade e ajudaram a pegar o mel. Em vez de comer tudo sozinho, Pingo dividiu com todos. Eles fizeram um piquenique sob as estrelas e descobriram que o mel era muito mais doce quando compartilhado com amigos.
+                <div class="story-card">
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">3. O Cachorrinho Corajoso</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                        Bidu era um cachorrinho pequeno que tinha medo de quase tudo. Um dia, seu amigo gato ficou preso em uma árvore. Mesmo com medo, Bidu decidiu ajudar. Ele latiu tão alto que chamou o dono da casa, que resgatou o gatinho. Todos ficaram orgulhosos de Bidu.
                     </p>
-                    <div class="inline-flex items-center gap-3 rounded-xl bg-emerald-50 px-5 py-2 text-emerald-800">
-                        <span class="font-bold">Moral:</span> A generosidade torna tudo mais saboroso.
+                    <div class="moral-tag">
+                        <span class="font-bold text-[10px]">Moral da História:</span> <span class="text-[10px]">Coragem não significa não ter medo.</span>
                     </div>
                 </div>
 
                 <!-- História 4 -->
-                <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">4. A Nuvem que Aprendeu a Chover</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Nuvinha tinha medo de soltar suas gotinhas. Ela via a terra seca e as flores murchas, mas ficava segurando a chuva. Um dia, uma borboleta explicou que a chuva era um presente para a vida. Nuvinha respirou fundo e soltou uma chuva suave e refrescante. Ela viu as flores se abrindo e a floresta ficando verde, sentindo-se a nuvem mais feliz do mundo.
+                <div class="story-card">
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">4. A Tartaruga Paciente</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                        Tina era uma tartaruga que caminhava bem devagar. Os outros animais riam dela porque eram mais rápidos. Mas um dia houve uma corrida na floresta, e Tina venceu porque nunca desistiu. Todos aprenderam que paciência e persistência fazem a diferença.
                     </p>
-                    <div class="inline-flex items-center gap-3 rounded-xl bg-emerald-50 px-5 py-2 text-emerald-800">
-                        <span class="font-bold">Moral:</span> Superar nossos medos pode trazer vida e alegria aos outros.
+                    <div class="moral-tag">
+                        <span class="font-bold text-[10px]">Moral da História:</span> <span class="text-[10px]">Devagar também se chega longe.</span>
                     </div>
                 </div>
 
                 <!-- História 5 -->
-                <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">5. O Peixinho que Descobriu o Mar</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Bolha era um peixinho que vivia em um pequeno recife. Ele tinha curiosidade sobre o que havia além das ondas. Com coragem, ele nadou um pouco mais longe e encontrou um jardim de corais coloridos e novos amigos. Ele percebeu que o mundo era grande e cheio de maravilhas, e voltou para casa para contar suas aventuras, sempre pronto para explorar um pouco mais a cada dia.
+                <div class="story-card">
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">5. O Gatinho Amigo</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                        Milo era um gatinho que adorava fazer novos amigos. Ele ajudava todos os animais da vizinhança sempre que podia. Quando Milo ficou doente, todos os amigos vieram visitá-lo. Ele percebeu que a amizade é o maior tesouro.
                     </p>
-                    <div class="inline-flex items-center gap-3 rounded-xl bg-emerald-50 px-5 py-2 text-emerald-800">
-                        <span class="font-bold">Moral:</span> A curiosidade nos leva a descobertas incríveis.
+                    <div class="moral-tag">
+                        <span class="font-bold text-[10px]">Moral da História:</span> <span class="text-[10px]">Quem faz o bem sempre recebe carinho de volta.</span>
                     </div>
                 </div>
 
                 <!-- História 6 -->
-                <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">6. A Formiguinha e o Grão de Açúcar</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Tica encontrou um grão de açúcar enorme, mas não conseguia carregá-lo sozinha. Ela chamou suas irmãs, e juntas, em uma fila organizada, levaram o tesouro para o formigueiro. Elas aprenderam que o trabalho em equipe torna qualquer tarefa possível e celebraram com um banquete doce para toda a colônia.
+                <div class="story-card">
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">6. A Borboleta Sonhadora</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                        Uma lagarta chamada Lita sonhava em voar. Os outros insetos diziam que isso era impossível. Mas um dia ela se transformou em uma linda borboleta e voou pelo jardim. Lita descobriu que sonhos podem se tornar realidade.
                     </p>
-                    <div class="inline-flex items-center gap-3 rounded-xl bg-emerald-50 px-5 py-2 text-emerald-800">
-                        <span class="font-bold">Moral:</span> Juntos somos mais fortes.
+                    <div class="moral-tag">
+                        <span class="font-bold text-[10px]">Moral da História:</span> <span class="text-[10px]">Nunca desista dos seus sonhos.</span>
                     </div>
                 </div>
 
                 <!-- História 7 -->
-                <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">7. O Elefante que Tinha Medo de Rato</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Dumbo era um elefante gigante, mas tremia ao ver um ratinho. Um dia, o ratinho Tico ficou preso em um arbusto. Dumbo, mesmo com medo, usou sua tromba para libertá-lo. Tico agradeceu com um abraço no pé do elefante. Dumbo percebeu que o ratinho era gentil e eles se tornaram melhores amigos, provando que o tamanho não define quem somos.
+                <div class="story-card">
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">7. O Leão Gentil</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                        Um grande leão vivia na floresta, mas ao contrário dos outros, ele era muito gentil. Ele protegia os animais menores e ajudava quem precisava. Logo todos perceberam que ele era o verdadeiro rei da floresta.
                     </p>
-                    <div class="inline-flex items-center gap-3 rounded-xl bg-emerald-50 px-5 py-2 text-emerald-800">
-                        <span class="font-bold">Moral:</span> A coragem é agir apesar do medo.
+                    <div class="moral-tag">
+                        <span class="font-bold text-[10px]">Moral da História:</span> <span class="text-[10px]">A verdadeira força está na bondade.</span>
                     </div>
                 </div>
 
                 <!-- História 8 -->
-                <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">8. A Girafa que Queria Alcançar as Nuvens</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Gigi esticava seu pescoço todos os dias para tocar as nuvens. Seus amigos riam, mas ela não desistia. Um dia, uma nuvem baixou para descansar em uma montanha. Gigi subiu e finalmente sentiu o toque macio da nuvem. Ela descobriu que as nuvens tinham cheiro de algodão doce e voltou feliz, ensinando a todos que sonhos podem ser alcançados.
+                <div class="story-card">
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">8. A Menina e o Passarinho</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                        Uma menina encontrou um passarinho ferido no jardim. Ela cuidou dele todos os dias até que ele melhorasse. Quando o passarinho voltou a voar, ele sempre voltava para visitá-la. A amizade deles durou muitos anos.
                     </p>
-                    <div class="inline-flex items-center gap-3 rounded-xl bg-emerald-50 px-5 py-2 text-emerald-800">
-                        <span class="font-bold">Moral:</span> Persistência transforma sonhos em realidade.
+                    <div class="moral-tag">
+                        <span class="font-bold text-[10px]">Moral da História:</span> <span class="text-[10px]">Cuidar dos outros traz alegria.</span>
                     </div>
                 </div>
 
                 <!-- História 9 -->
-                <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">9. O Passarinho que Perdeu o Ninho</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Canteiro se perdeu durante uma tempestade. Ele estava triste e com frio, mas encontrou abrigo na varanda de uma casa. Uma criança deixou migalhas de pão e água para ele. No dia seguinte, o sol brilhou e Canteiro encontrou o caminho de volta, levando no coração a bondade que recebeu de um estranho.
+                <div class="story-card">
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">9. O Ursinho Generoso</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                        Um ursinho encontrou um pote de mel enorme na floresta. Em vez de guardar tudo para ele, chamou seus amigos. Todos comeram juntos e se divertiram muito. O ursinho percebeu que dividir torna tudo melhor.
                     </p>
-                    <div class="inline-flex items-center gap-3 rounded-xl bg-emerald-50 px-5 py-2 text-emerald-800">
-                        <span class="font-bold">Moral:</span> Pequenos atos de bondade iluminam dias difíceis.
+                    <div class="moral-tag">
+                        <span class="font-bold text-[10px]">Moral da História:</span> <span class="text-[10px]">Alegria compartilhada é alegria dobrada.</span>
                     </div>
                 </div>
 
                 <!-- História 10 -->
-                <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">10. O Gatinho que Tinha Medo de Escuro</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Miau se escondia sempre que a luz apagava. Sua mãe explicou que o escuro era apenas o mundo descansando. Ela mostrou como as estrelas brilhavam e como o silêncio era relaxante. Miau começou a gostar da noite e descobriu que podia ter sonhos maravilhosos enquanto dormia tranquilo sob o luar.
+                <div class="story-card">
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">10. A Árvore que Dava Abraços</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                        Uma árvore antiga adorava dar sombra para quem descansava perto dela. Crianças brincavam, pássaros cantavam e todos gostavam de ficar ali. A árvore percebeu que ajudar os outros era sua maior alegria.
                     </p>
-                    <div class="inline-flex items-center gap-3 rounded-xl bg-emerald-50 px-5 py-2 text-emerald-800">
-                        <span class="font-bold">Moral:</span> Conhecer o que nos assusta faz o medo desaparecer.
+                    <div class="moral-tag">
+                        <span class="font-bold text-[10px]">Moral da História:</span> <span class="text-[10px]">Pequenas atitudes fazem grande diferença.</span>
                     </div>
                 </div>
 
                 <!-- História 11 -->
-                <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">11. A Tartaruga que Queria Correr</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Tuga via os coelhos correndo e ficava triste por ser lenta. Um velho sábio disse que ser lento permitia ver detalhes que os outros perdiam. Tuga começou a observar as flores raras e os pequenos insetos. Ela percebeu que sua jornada era rica e cheia de beleza, aceitando e amando seu próprio ritmo.
+                <div class="story-card">
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">11. O Peixinho Curioso</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                        Um pequeno peixe queria explorar o oceano. Ele viajou por muitos lugares e conheceu novos amigos. No final, percebeu que o melhor lugar ainda era seu lar.
                     </p>
-                    <div class="inline-flex items-center gap-3 rounded-xl bg-emerald-50 px-5 py-2 text-emerald-800">
-                        <span class="font-bold">Moral:</span> Cada um tem seu tempo e sua beleza única.
+                    <div class="moral-tag">
+                        <span class="font-bold text-[10px]">Moral da História:</span> <span class="text-[10px]">Aventuras são boas, mas o lar é especial.</span>
                     </div>
                 </div>
 
                 <!-- História 12 -->
-                <div class="story-card rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">12. O Leão que Aprendeu a Rugir Baixinho</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Leo achava que precisava rugir alto para ser respeitado. Mas seu rugido assustava os passarinhos e as borboletas. Ele tentou falar baixinho e descobriu que os animais chegavam mais perto para ouvir. Ele se tornou o rei mais amado da selva, não pelo medo, mas pelo carinho e pela atenção que dava a todos.
+                <div class="story-card">
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">12. A Lua Amiga</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                        Uma criança tinha medo do escuro. Todas as noites ela olhava para a lua pela janela. Com o tempo, percebeu que a lua iluminava a noite e nunca a deixava sozinha. Assim ela dormia tranquila.
                     </p>
-                    <div class="inline-flex items-center gap-3 rounded-xl bg-emerald-50 px-5 py-2 text-emerald-800">
-                        <span class="font-bold">Moral:</span> A gentileza tem mais poder que a força.
+                    <div class="moral-tag">
+                        <span class="font-bold text-[10px]">Moral da História:</span> <span class="text-[10px]">Sempre há uma luz mesmo na escuridão.</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Produto Fundo -->
-        <div class="produto-box mb-24">
+        <div class="produto-box">
             <span class="selo">Melhor Escolha</span>
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="shrink-0">
-                    <img src="https://i.postimg.cc/qBCWcPsc/365-Historias-Para-Dormir-Pe-da-Letra.webp" alt="365 Histórias Para Dormir" class="max-w-[250px] rounded-lg shadow-md" referrerPolicy="no-referrer">
-                </div>
-                <div class="flex-1 text-center md:text-left">
-                    <h2 class="text-[#1a7f37] text-2xl font-bold mb-1">365 Histórias Para Dormir – Pé da Letra</h2>
-                    <h3 class="text-lg text-[#333] font-semibold mb-3">Livro Infantil</h3>
-                    <p class="text-[#555] text-sm leading-relaxed">
-                        Um livro perfeito para criar momentos especiais antes de dormir. Com 365 histórias encantadoras, ele ajuda a estimular a imaginação das crianças e tornar a hora do sono muito mais divertida.
-                    </p>
-                    <a href="https://s.shopee.com.br/807uD19pBp" target="_blank" class="botao-preco">Ver Preço</a>
-                </div>
+            <div class="shrink-0">
+                <img src="https://i.postimg.cc/qBCWcPsc/365-Historias-Para-Dormir-Pe-da-Letra.webp" alt="365 Histórias Para Dormir" class="w-40 rounded-lg shadow-sm" referrerPolicy="no-referrer">
+            </div>
+            <div>
+                <h2 class="text-[#2ecc71] text-lg font-bold mb-1">365 Histórias Para Dormir – Pé da Letra</h2>
+                <p class="text-slate-800 font-bold text-xs mb-2">Livro Infantil</p>
+                <p class="text-slate-500 text-[11px] leading-relaxed">
+                    Um livro perfeito para criar momentos especiais antes de dormir. Com 365 histórias encantadoras, ele ajuda a estimular a imaginação das crianças e tornar a hora do sono muito mais divertida.
+                </p>
+                <a href="https://s.shopee.com.br/807uD19pBp" target="_blank" class="botao-preco text-xs">Ver Preço</a>
             </div>
         </div>
 
         <!-- Tabela -->
-        <section class="mb-24 overflow-hidden rounded-2xl border border-slate-200">
-            <table class="w-full text-left border-collapse">
-                <thead class="bg-slate-900 text-white">
-                    <tr>
-                        <th class="p-4">Tipo de História</th>
-                        <th class="p-4">Duração</th>
-                        <th class="p-4">Idade</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-slate-200">
-                    <tr><td class="p-4">Fábulas</td><td class="p-4">3-5 min</td><td class="p-4">2-6 anos</td></tr>
-                    <tr><td class="p-4">Contos de Fadas</td><td class="p-4">5-8 min</td><td class="p-4">4-8 anos</td></tr>
-                    <tr><td class="p-4">Educativas</td><td class="p-4">4-6 min</td><td class="p-4">3-7 anos</td></tr>
-                </tbody>
-            </table>
+        <section class="my-24">
+            <h2 class="text-xl font-bold text-slate-900 mb-8 text-center">Tipos de histórias infantis para dormir</h2>
+            
+            <div class="mb-10 space-y-4 rounded-xl bg-slate-50 p-6 border border-slate-100">
+                <div class="flex gap-4">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-[8px]">P1</div>
+                    <p class="text-slate-600 italic text-[11px]">"Existem tipos diferentes de histórias para crianças?"</p>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-[8px]">P2</div>
+                    <p class="text-slate-600 text-[11px]">"Sim! Cada tipo de história pode ter um objetivo diferente."</p>
+                </div>
+            </div>
+
+            <div class="overflow-hidden rounded-xl border border-slate-200">
+                <table class="w-full text-left text-[10px]">
+                    <thead class="bg-slate-900 text-white">
+                        <tr>
+                            <th class="p-3 font-semibold">TIPO DE HISTÓRIA</th>
+                            <th class="p-3 font-semibold">DURAÇÃO</th>
+                            <th class="p-3 font-semibold">IDADE RECOMENDADA</th>
+                            <th class="p-3 font-semibold">OBJETIVO</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200">
+                        <tr>
+                            <td class="p-3">Histórias curtas</td>
+                            <td class="p-3">2-5 minutos</td>
+                            <td class="p-3">0 a 4 anos</td>
+                            <td class="p-3">Relaxar antes de dormir</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">Histórias educativas</td>
+                            <td class="p-3">5-10 minutos</td>
+                            <td class="p-3">3 a 7 anos</td>
+                            <td class="p-3">Ensinar valores</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">Contos clássicos</td>
+                            <td class="p-3">10 minutos</td>
+                            <td class="p-3">5 a 8 anos</td>
+                            <td class="p-3">Estimular imaginação</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Dicas de Uso -->
+        <section class="mb-24">
+            <h2 class="text-xl font-bold text-slate-900 mb-12 text-center">Como usar histórias para ajudar crianças a dormir</h2>
+            
+            <div class="mb-10 space-y-4 rounded-xl bg-slate-50 p-6 border border-slate-100">
+                <div class="flex gap-4">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-[8px]">P1</div>
+                    <p class="text-slate-600 italic text-[11px]">"Existe uma forma certa de contar essas histórias?"</p>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-[8px]">P2</div>
+                    <p class="text-slate-600 text-[11px]">"Sim! Algumas dicas podem ajudar muito."</p>
+                </div>
+            </div>
+
+            <div class="grid gap-8 md:grid-cols-2">
+                <ul class="space-y-3 text-[11px] text-slate-600">
+                    <li class="flex items-center gap-2">● conte a história com voz calma</li>
+                    <li class="flex items-center gap-2">● diminua as luzes do quarto</li>
+                    <li class="flex items-center gap-2">● deixe a criança imaginar os personagens</li>
+                    <li class="flex items-center gap-2">● crie uma rotina diária de leitura</li>
+                </ul>
+                <div class="rounded-2xl bg-indigo-900 p-6 text-white flex flex-col justify-center items-center text-center">
+                    <div class="mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </div>
+                    <p class="text-[11px] font-medium italic">"A calma na voz dos pais é o melhor convite para o sono."</p>
+                </div>
+            </div>
         </section>
 
         <!-- FAQ -->
         <section id="faq" class="mb-24">
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Perguntas Frequentes</h2>
-            <div class="space-y-4">
-                <div class="rounded-xl border border-slate-200 p-6">
-                    <h4 class="font-bold mb-2">Qual o melhor horário para ler?</h4>
-                    <p class="text-slate-600">O ideal é ler cerca de 20 a 30 minutos antes do horário planejado para dormir.</p>
+            <h2 class="text-xl font-bold text-slate-900 mb-12 text-center">FAQ – Perguntas Frequentes</h2>
+            <div class="space-y-3">
+                <div class="rounded-lg border border-slate-200 p-4 flex justify-between items-center text-[11px] font-medium text-slate-700">
+                    <span>Qual a melhor história curta para dormir?</span>
+                    <span class="text-slate-400">⊕</span>
                 </div>
-                <div class="rounded-xl border border-slate-200 p-6">
-                    <h4 class="font-bold mb-2">Posso ler a mesma história várias vezes?</h4>
-                    <p class="text-slate-600">Sim! A repetição traz segurança e ajuda no aprendizado da criança.</p>
+                <div class="rounded-lg border border-slate-200 p-4 flex justify-between items-center text-[11px] font-medium text-slate-700">
+                    <span>Histórias ajudam crianças a dormir mais rápido?</span>
+                    <span class="text-slate-400">⊕</span>
+                </div>
+                <div class="rounded-lg border border-slate-200 p-4 flex justify-between items-center text-[11px] font-medium text-slate-700">
+                    <span>Quanto tempo deve durar uma história infantil?</span>
+                    <span class="text-slate-400">⊕</span>
+                </div>
+                <div class="rounded-lg border border-slate-200 p-4 flex justify-between items-center text-[11px] font-medium text-slate-700">
+                    <span>Crianças pequenas gostam de histórias curtas?</span>
+                    <span class="text-slate-400">⊕</span>
+                </div>
+                <div class="rounded-lg border border-slate-200 p-4 flex justify-between items-center text-[11px] font-medium text-slate-700">
+                    <span>Qual idade ideal para histórias antes de dormir?</span>
+                    <span class="text-slate-400">⊕</span>
                 </div>
             </div>
         </section>
 
         <!-- Conclusão -->
-        <section class="rounded-3xl bg-slate-900 p-10 text-white text-center">
-            <h2 class="text-3xl font-bold mb-6">Conclusão</h2>
-            <p class="text-slate-300 max-w-2xl mx-auto">
-                Contar histórias curtas para dormir infantil com final feliz é uma ferramenta poderosa. Esperamos que estas 12 histórias tragam noites mais tranquilas para sua família.
-            </p>
-            <p class="mt-8 text-sm uppercase tracking-widest text-slate-500 font-bold">Boa noite e bons sonhos!</p>
+        <section class="rounded-3xl bg-slate-50 p-12 border border-slate-100 text-center">
+            <div class="flex justify-center mb-6">
+                <span class="text-red-500 text-3xl">❤</span>
+            </div>
+            <h2 class="text-xl font-bold text-slate-900 mb-8">Conclusão</h2>
+            
+            <div class="mb-10 space-y-4 text-left max-w-2xl mx-auto">
+                <div class="flex gap-4">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 font-bold text-[8px]">P1</div>
+                    <p class="text-slate-600 italic text-[10px]">"Agora entendi por que as histórias antes de dormir são tão importantes."</p>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold text-[8px]">P2</div>
+                    <p class="text-slate-600 text-[10px]">"Fundamental! As 12 Histórias Curtas para Dormir Infantil com Final Feliz que você viu aqui são perfeitas para criar momentos especiais com as crianças."</p>
+                </div>
+            </div>
+
+            <div class="grid gap-8 md:grid-cols-2 text-left max-w-2xl mx-auto mb-10">
+                <div>
+                    <h3 class="text-[11px] font-bold text-slate-900 mb-3">Os principais benefícios são:</h3>
+                    <ul class="space-y-2 text-[10px] text-slate-600">
+                        <li class="flex items-center gap-2"><span class="text-emerald-500">●</span> ajudam a criança a relaxar</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500">●</span> estimulam a imaginação</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500">●</span> fortalecem o vínculo entre pais e filhos</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-500">●</span> ensinam valores importantes</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-[11px] font-bold text-slate-900 mb-3">Essas histórias são ideais para:</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-[9px] font-medium">pais</span>
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-[9px] font-medium">educadores</span>
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-[9px] font-medium">cuidadores</span>
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-[9px] font-medium">professores</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-[11px] text-slate-600 mb-6">Criar o hábito de contar histórias para dormir pode transformar completamente a rotina noturna das crianças.</p>
+            <p class="text-[12px] font-bold text-indigo-600">Uma simples história pode se tornar uma lembrança inesquecível para toda a vida.</p>
         </section>
 
     </main>
 
-    <footer class="bg-slate-50 py-12 border-t border-slate-100 text-center">
-        <p class="text-slate-500 text-sm">© 2026 Histórias para Dormir. Todos os direitos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-50 py-12 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 grid gap-8 md:grid-cols-3 text-left">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="flex h-6 w-6 items-center justify-center rounded-lg bg-indigo-600 text-white font-bold text-xs">H</div>
+                    <span class="text-xs font-bold text-slate-900">Blog Infantil</span>
+                </div>
+                <p class="text-[10px] text-slate-500 leading-relaxed">Dedicado a criar momentos mágicos entre pais e filhos através da leitura de contos antes do sono.</p>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-bold text-slate-900 mb-4 uppercase tracking-wider">Navegação</h4>
+                <ul class="space-y-2 text-[10px] text-slate-500">
+                    <li><a href="#" class="hover:text-indigo-600">Início</a></li>
+                    <li><a href="#historias" class="hover:text-indigo-600">Histórias Curtas</a></li>
+                    <li><a href="#beneficios" class="hover:text-indigo-600">Benefícios da Leitura</a></li>
+                    <li><a href="#faq" class="hover:text-indigo-600">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-bold text-slate-900 mb-4 uppercase tracking-wider">Comunidade</h4>
+                <p class="text-[10px] text-slate-500 mb-4">Compartilhe essas histórias com outros pais e ajude mais crianças a terem sonhos tranquilos.</p>
+                <div class="flex gap-3">
+                    <div class="h-6 w-6 rounded-full bg-slate-200"></div>
+                    <div class="h-6 w-6 rounded-full bg-slate-200"></div>
+                    <div class="h-6 w-6 rounded-full bg-slate-200"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 pt-8 border-t border-slate-200 text-center">
+            <p class="text-[9px] text-slate-400">© 2026 Histórias para Dormir. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
 </body>
